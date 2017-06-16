@@ -3,10 +3,12 @@ ipsum_file = open('files/ipsum.txt')
 for line in ipsum_file:
     print(line.rstrip()) # rstrip strips out line breaks
 
+ipsum_file.seek(0) # sets the start counter at char 50
+    
 lines = ipsum_file.readlines() # stores lines in a list
 print(lines)
 
-ipsum_file.seek(50) # sets the start counter at char 50
+ipsum_file.seek(0) # sets the start counter at char 50
 file_text = ipsum_file.read(100) # entire contents of file in string
 print(file_text)
 
